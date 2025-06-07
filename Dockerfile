@@ -7,7 +7,7 @@ RUN go install golang.org/x/tools/cmd/stringer@v0.12.0
 
 ADD . /go/src/github.com/1xyz/coolbeans
 WORKDIR /go/src/github.com/1xyz/coolbeans
-RUN make release/linux
+RUN make build
 
 ###
 
