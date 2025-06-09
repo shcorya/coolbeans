@@ -77,11 +77,11 @@ generate:
 
 .PHONY: protoc
 protoc:
-	$(GO) get -u github.com/golang/protobuf/protoc-gen-go
+	$(GO) get github.com/golang/protobuf/protoc-gen-go@v1.5.3
 	$(PROTOC) -I api/v1 api/v1/*.proto --go_out=plugins=grpc:api/v1 --go_opt=paths=source_relative
 
 
-release/%: clean fmt protoc
+release/%: clean fmt
 	@echo "build no race on alpine. https://github.com/golang/go/issues/14481"
 	$(GO) test ./...
 	@echo "build GOOS: $(subst release/,,$@) & GOARCH: amd64"

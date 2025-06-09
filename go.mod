@@ -7,7 +7,7 @@ require (
 	github.com/beanstalkd/go-beanstalk v0.0.0-20200229072127-2b7b37f17578
 	github.com/davecgh/go-spew v1.1.1
 	github.com/docopt/docopt-go v0.0.0-20180111231733-ee0de3bc6815
-	github.com/golang/protobuf v1.5.2
+	github.com/golang/protobuf v1.5.0 // indirect
 	github.com/google/uuid v1.1.1
 	github.com/hashicorp/raft v1.1.2
 	github.com/hashicorp/raft-boltdb v0.0.0-20191021154308-4207f1bf0617
