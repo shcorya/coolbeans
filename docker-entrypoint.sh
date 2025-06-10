@@ -28,6 +28,6 @@ do
   fi
 done
 
-echo $COOLBEANS_PARAMETERS $@
+echo "coolbeans $@ $COOLBEANS_PARAMETERS"
 
-#exec coolbeans $COOLBEANS_PARAMETERS $@
+exec bash -c "coolbeans $@ $COOLBEANS_PARAMETERS"

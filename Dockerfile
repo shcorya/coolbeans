@@ -19,3 +19,7 @@ FROM alpine:latest AS coolbeans
 RUN apk update && apk add ca-certificates bash
 WORKDIR /root/
 COPY --from=builder /go/src/github.com/1xyz/coolbeans/bin/linux/coolbeans /usr/local/bin/coolbeans
+
+COPY docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
+
+ENTRYPOINT ["docker-entrypoint.sh"]
