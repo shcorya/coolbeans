@@ -5,7 +5,7 @@ set -e
 readarray -t COOLBEANS_ENV < <(printenv | grep ^COOLBEANS)
 
 # parameters will be passed as a string
-COOLBEANS_PARAMETERS=" $COOLBEANS_MODE "
+COOLBEANS_PARAMETERS=""
 
 # convert env vars to flags
 for i in "${!COOLBEANS_ENV[@]}"
@@ -28,6 +28,6 @@ do
   fi
 done
 
-echo "coolbeans $@ $COOLBEANS_PARAMETERS"
+echo "coolbeans $@ $COOLBEANS_MODE $COOLBEANS_PARAMETERS"
 
-exec bash -c "coolbeans $@ $COOLBEANS_PARAMETERS"
+exec bash -c "coolbeans $@ $COOLBEANS_MODE $COOLBEANS_PARAMETERS"
